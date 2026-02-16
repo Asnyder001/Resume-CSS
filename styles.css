@@ -1,0 +1,143 @@
+/* ===============================
+   GLOBAL STYLES (Mobile First)
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===== Container Layout ===== */
+
+main {
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #1f3c88, #4b6cb7);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 8px 0;
+}
+
+/* ===== Links ===== */
+
+a {
+    color: #4b6cb7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Sections ===== */
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #4b6cb7;
+    padding-bottom: 6px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== Lists ===== */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ===== Projects Links Styling ===== */
+
+section ul li a {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #4b6cb7;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+section ul li a:hover {
+    background: #1f3c88;
+}
+
+/* =====================================
+   DESKTOP RESPONSIVE LAYOUT (900px+)
+===================================== */
+
+@media (min-width: 900px) {
+
+    body {
+        background: #e9edf5;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    /* First 4 sections go in main column */
+    main section:nth-child(-n+4) {
+        grid-column: 1;
+    }
+
+    /* Skills section becomes sidebar */
+    main section:last-child {
+        grid-column: 2;
+        position: sticky;
+        top: 40px;
+        height: fit-content;
+    }
+
+    header {
+        text-align: left;
+        padding: 40px 60px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
